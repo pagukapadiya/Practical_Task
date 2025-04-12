@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+🧪 Practical React Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A practical frontend built with React that includes user registration, email verification, login, and a dynamic booking system. This project is designed with real-world performance in mind, simulating a system handling 10K+ bookings daily with 1M+ records.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+🚀 Getting Started
 
-### `npm start`
+1. Install Dependencies
+-----------------------
+npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. Start the Development Server
+-------------------------------
+npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The app will run on: http://localhost:3000
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+📁 Folder Structure
 
-### `npm run build`
+src/
+├── assets/            # Images, icons , Style
+├── components/        # Reusable UI components
+├── pages/             # Signup, Login, Booking pages
+├── store/             # Redux store and slices
+├── healper/             # Helper utilities
+└── App.js             # App root
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+✅ Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 User Auth (Users)
+- Sign up with First Name, Last Name, Email, Password
+- Duplicate emails are restricted
+- Email verification required before login
+- Strong form validation (Formik + Yup)
 
-### `npm run eject`
+🗓️ Booking Form
+- Fields:
+  - Customer Name
+  - Customer Email
+  - Booking Date
+  - Booking Type (Full Day, Half Day, Custom)
+  - Booking Slot (for Half Day)
+  - Booking From & To Time (for Custom)
+- Conditional rendering of form fields
+- Redux for state management
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+🧠 Booking Rules & Restrictions
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- No overlapping bookings allowed.
+- Examples:
+  - If a Full Day is booked on a date, no other type is allowed on that date.
+  - If Half Day - First Half is booked, then:
+    - Full Day is not allowed.
+    - Custom bookings that fall in morning time are restricted.
+  - If Custom time 10 AM - 11 AM is booked:
+    - Full Day & First Half are restricted.
+    - No overlapping Custom bookings allowed.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+⚙️ Technologies Used
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- React
+- Redux Toolkit
+- React Router DOM
+- React Bootstrap
+- Formik + Yup
+- SCSS / Sass
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+📌 Note
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Ensure backend is running (Node.js + MySQL)
+- Email verification and booking overlap logic are handled server-side
+- This frontend is fully integrated with the backend for end-to-end functionality
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+📬 Contact
 
-### Making a Progressive Web App
+If you have any questions or issues while running this project, feel free to contact me.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+🏁 Author
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Built with ❤️ by Pragnesh Kapadiya
