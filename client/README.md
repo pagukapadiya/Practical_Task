@@ -6,10 +6,10 @@ A practical frontend built with React that includes user registration, email ver
 
 🚀 Getting Started
 
-1. Install Dependencies
+1. Install Dependencies :
 npm install
 
-2. Start the Development Server
+2. Start the Development Server :
 npm start
 
 The app will run on: http://localhost:3000
