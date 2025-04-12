@@ -18,18 +18,6 @@ The app will run on: http://localhost:3000
 
 ---
 
-📁 Folder Structure
-
-src/
-├── assets/            # Images, icons , Style
-├── components/        # Reusable UI components
-├── pages/             # Signup, Login, Booking pages
-├── store/             # Redux store and slices
-├── healper/             # Helper utilities
-└── App.js             # App root
-
----
-
 ✅ Features
 
 👤 User Auth (Users)
